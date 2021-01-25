@@ -286,7 +286,7 @@
 .visited-sights {
   margin-top: 50px;
   width: 100%;
-  display: block;
+  display: none;
 
   &__heading {
     @include headings(21px, center);
@@ -360,7 +360,7 @@
 .emotions {
   margin-top: 65px;
   width: 100%;
-  display: block;
+  display: none;
 
   &__heading {
     @include headings(21px, center);
