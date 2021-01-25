@@ -1,0 +1,155 @@
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .background {
+    background: bottom / cover no-repeat url(../img/header/background-tablet.jpg);
+    padding-bottom: 28px;
+
+    &__text {
+      width: 59%;
+    }
+  }
+
+  .nav {
+    &__logo_wrapper {
+      padding-top: 27px;
+    }
+  }
+
+  .main__container {
+    max-width: 648px;
+    margin: 62px auto 0 auto;
+  }
+
+  .form {
+    margin-top: 76px;
+
+    .impression {
+      padding-right: 7.7%;
+
+      &__option {
+        & + label {
+          &:before {
+            margin-right: 24px;
+          }
+        }
+      }
+    }
+
+    .introduction {
+      padding-left: 8.5%;
+    }
+
+    .contact-info {
+      &__inputs {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__input {
+        width: 100%;
+      }
+
+      &__heading {
+        &:before {
+          width: 19%;
+        }
+
+        &:after {
+          width: 19%;
+        }
+      }
+
+      &__inputs {
+        margin-top: 33px;
+      }
+
+      &__label {
+        margin-left: 22px;
+      }
+
+      &__input-wrap {
+        margin: 12px 0px 30px;
+      }
+
+      &__phone-hide {
+        display: inline-block;
+      }
+
+      &__form-wrap {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .visited-sights {
+      margin-top: 23px;
+      &__heading {
+        &:before {
+          width: 19%;
+        }
+
+        &:after {
+          width: 19%;
+        }
+      }
+
+      &__sight {
+        width: 50%;
+
+        &:not(:last-child) {
+          padding-bottom: 33px;
+        }
+
+        &:nth-child(odd) {
+          padding-left: 15.5%;
+        }
+
+        &:nth-child(even) {
+          padding-left: 5%;
+        }
+      }
+    }
+
+    .emotions {
+      margin-top: 35px;
+      &__heading {
+        &:before {
+          width: 19%;
+        }
+
+        &:after {
+          width: 19%;
+        }
+      }
+
+      &__textarea-wrap {
+        margin-top: 58px;
+      }
+    }
+
+    .submit {
+      margin-top: 54px;
+
+      &__mandatory-text {
+        margin: 3px 0px 0px 0px;
+        letter-spacing: 0.08px;
+      }
+    }
+  }
+
+  .footer {
+    &__container {
+      flex-wrap: wrap;
+      max-width: 648px;
+      margin: 96px auto 0px auto;
+    }
+
+    &__hashtag {
+      margin-left: 0px;
+    }
+  }
+}
