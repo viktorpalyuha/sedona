@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boosta Form</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/tablet.css" />
+    <link rel="stylesheet" href="css/phone.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item"><a href="#">ГЛАВНАЯ</a><button class="nav__close-icon"></button></li>
+            <li class="nav__item"><a href="#">ФОТО И ВИДЕО</a></li>
+            <div class="nav__logo_wrapper">
+              <a class="nav__logo" href="/">
+                <picture>
+                  <source media="(min-width: 769px)" srcset="img/header/logotype-desktop.png" />
+                  <source media="(min-width: 321px)" srcset="img/header/logotype-tablet.png" />
+                  <img src="img/header/logotype-mobile.png" alt="logo" />
+                </picture>
+              </a>
+            </div>
+            <li class="nav__item"><a href="#">ФОРМА ОТЗЫВА</a></li>
+            <li class="nav__item"><a href="#">HTML ACADEMY</a></li>
+          </ul>
+        </nav>
+        <div class="background">
+          <img src="img/header/text-sedona.png" alt="SEDONA logo text" class="background__text" />
+        </div>
+      </header>
+      <main class="main">
+        <div class="main__container">
+          <div class="leave-review">
+            <div class="leave-review__heading">
+              <h2>ОСТАВЬТЕ СВОЙ ОТЗЫВ</h2>
+            </div>
+            <div class="leave-review__main">
+              <p>Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+            </div>
+          </div>
+          <form action="#" method="#" class="form">
+            <fieldset class="impression">
+              <legend class="impression__heading form__legend">Ваше общее впечатление:</legend>
+              <div class="impression__radio-options">
+                <div>
+                  <input type="radio" name="option" id="positive" class="impression__option" /><label for="positive"
+                    >Скорее положительное</label
+                  >
+                </div>
+                <div>
+                  <input type="radio" name="option" id="negative" class="impression__option" /><label for="negative"
+                    >Скорее отрицательное</label
+                  >
+                </div>
+                <div>
+                  <input type="radio" name="option" id="can't-answer" class="impression__option" /><label for="can't-answer"
+                    >Затрудняюсь ответить</label
+                  >
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="introduction">
+              <div class="introduction__heading">
+                <legend class="form__legend">Представьтесь:</legend>
+              </div>
+              <div class="introduction__inputs">
+                <div class="introduction__input-wrapper">
+                  <label for="name" class="introduction__input-label">Имя*:</label>
+                  <input type="text" name="name" id="name" class="introduction__input" placeholder="Петр" required />
+                </div>
+                <div class="introduction__input-wrapper">
+                  <label for="surname" class="introduction__input-label">Фамилия*:</label>
+                  <input type="text" name="surname" id="surname" class="introduction__input" placeholder="Иванов" required />
+                </div>
+                <div class="introduction__input-wrapper">
+                  <label for="patronimic-name" class="introduction__input-label">Отчество:</label>
+                  <input type="text" name="patronimic-name" id="patronimic-name" class="introduction__input" placeholder="Александрович" />
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="contact-info">
+              <div class="contact-info__heading">
+                <legend class="form__legend">Контактная информация:</legend>
+              </div>
+              <div class="contact-info__inputs">
+                <div class="contact-info__form-wrap">
+                  <label for="phone-number" class="contact-info__label"
+                    ><span class="contact-info__phone-hide">Контактный</span> Телефон*:
+                  </label>
+                  <div class="contact-info__input-wrap">
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="Введите телефон" class="contact-info__input" />
+                    <div class="contact-info__icon contact-info__phone-icon"></div>
+                  </div>
+                </div>
+                <div class="contact-info__form-wrap">
+                  <label for="email" class="contact-info__label">Электронная почта*:</label>
+                  <div class="contact-info__input-wrap">
+                    <input type="email" name="email" id="email" placeholder="Введите e-mail" class="contact-info__input" />
+                    <div class="contact-info__icon contact-info__email-icon"></div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="visited-sights">
+              <div class="visited-sights__heading">
+                <legend class="form__legend">Посещенные достопримечательности:</legend>
+              </div>
+              <div class="visited-sights__checkboxes">
+                <div class="visited-sights__sight">
+                  <input type="checkbox" name="devil's-bridge" id="devil's-bridge" class="visited-sights__checkbox" />
+                  <label for="devil's-bridge">Мост Дьявола</label>
+                </div>
+                <div class="visited-sights__sight">
+                  <input type="checkbox" name="sanbangsan-mountain" id="sanbangsan-mountain" class="visited-sights__checkbox" />
+                  <label for="sanbangsan-mountain">Гора-Колокол</label>
+                </div>
+                <div class="visited-sights__sight">
+                  <input type="checkbox" name="slide-park" id="slide-park" class="visited-sights__checkbox" />
+                  <label for="slide-park">Слайд-парк</label>
+                </div>
+                <div class="visited-sights__sight">
+                  <input type="checkbox" name="sedona-cliffs" id="sedona-cliffs" class="visited-sights__checkbox" />
+                  <label for="sedona-cliffs">Красные скалы</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="emotions">
+              <div class="emotions__heading">
+                <legend class="form__legend">Опишите свои эмоции:</legend>
+              </div>
+              <div class="emotions__textarea-wrap">
+                <textarea
+                  name="emotions"
+                  id="emotions"
+                  cols="30"
+                  rows="10"
+                  placeholder="Опишите подробно все свои восторги"
+                  class="emotions__textarea"
+                ></textarea>
+              </div>
+            </fieldset>
+            <fieldset class="submit">
+              <button type="submit" class="submit__button">Отправить отзыв</button>
+              <span class="submit__mandatory-text">* — Обязательные поля</span>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__hashtag">
+            <h4>#visitsedona</h4>
+          </div>
+          <div class="socials">
+            <a href="#" class="socials__item"><img src="img/footer/icon-twitter.png" alt="twitter icon" /></a>
+            <a href="#" class="socials__item"><img src="img/footer/icon-facebook.png" alt="facebook icon" /></a>
+            <a href="#" class="socials__item"><img src="img/footer/icon-youtube.png" alt="youtube icon" /></a>
+          </div>
+          <div class="copyrights">
+            <span>Разработано</span>
+            <img src="img/footer/htmlacademy.png" alt="copyright-logo" />
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Thank you!!</p>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+$inputs-color: #f2f2f2;
+$buttons-color: #81b3d3;
+$labels-color: rgb(51, 51, 51);
+
+@mixin containers($width, $margin) {
+    max-width: $width;
+    margin: $margin;
+}
+
+@mixin placeholders() {
+    color: black;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@mixin inputs($width, $padding) {
+    background-color: $inputs-color;
+    border: none;
+    padding: $padding;
+    width: $width;
+    height: 58px;
+    color: black;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    font-size: 18px;
+}
+
+@mixin inputs-container($margin-top) {
+    display: flex;
+    margin-top: $margin-top;
+    font-family: 'PT Sans';
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $labels-color;
+}
+
+@mixin headings($font-size, $text-align) {
+    font-size: $font-size;
+    font-family: 'PT Sans';
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: $text-align;
+}
