@@ -30,20 +30,26 @@ radioOptions.forEach((radio) =>
 
 submitButton.addEventListener('click', (event) => {
   event.preventDefault();
+  removeRedundantWarnings();
+  let isAnyInputFalse;
   if (!checkIntroductionInputs()) {
-    return;
+    isAnyInputFalse = true;
   }
   if (!checkContactInfo()) {
-    return;
+    isAnyInputFalse = true;
   }
   if (!checkEmotionsTextArea()) {
     showWarningMessage(emotionsTextArea);
-    return;
+    isAnyInputFalse = true;
   }
   if (!checkVisitedSights()) {
-    return;
+    isAnyInputFalse = true;
   }
-  showModal();
+  if (isAnyInputFalse) {
+    return;
+  } else {
+    showModal();
+  }
 });
 
 function checkIntroductionInputs() {
@@ -86,10 +92,17 @@ function checkVisitedSights() {
     return true;
   } else {
     visitedSightsCheckboxes.forEach((checkbox) => {
-      checkbox.checked ? (isOneChecked = true) : showWarningMessage(checkbox);
-    });
+      if(checkbox.checked) {
+        isOneChecked = true;
+      }
+    });  
   }
-  return isOneChecked;
+  if(!isOneChecked) {
+    showWarningMessage(visitedSightsCheckboxes[3])
+    return isOneChecked;
+  } else {
+    return isOneChecked;
+  }
 }
 
 function checkEmotionsTextArea() {
@@ -101,7 +114,6 @@ function checkEmotionsTextArea() {
 }
 
 function showModal() {
-  removeRedundantWarnings();
   modal.style.display = 'block';
 }
 
@@ -117,8 +129,6 @@ function removeRedundantWarnings() {
 }
 
 function showWarningMessage(element) {
-  removeRedundantWarnings();
-
   const span = document.createElement('span');
   span.classList.add('incorrect-message');
   span.innerText = 'Please, fill it in';
